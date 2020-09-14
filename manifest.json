@@ -1,12 +1,12 @@
 {
-  "name": "PWA Starter",
+  "name": "PWA Experimental",
   "display": "standalone",
   "start_url": "/",
-  "short_name": "starter",
-  "theme_color": "#686bd2",
-  "description": "This is a PWA Starter app",
+  "short_name": "experimental",
+  "theme_color": "#189eac",
+  "description": "This is an experimental PWA",
   "orientation": "any",
-  "background_color": "#686bd2",
+  "background_color": "#189eac",
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [

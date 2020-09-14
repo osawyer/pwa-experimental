@@ -1,8 +1,8 @@
 import { LitElement, css, html, customElement } from 'lit-element';
 
 
-@customElement('app-about')
-export class AppAbout extends LitElement {
+@customElement('app-generate-pdf')
+export class AppGeneratePdf extends LitElement {
 
   static get styles() {
     return css`
@@ -16,8 +16,10 @@ export class AppAbout extends LitElement {
   render() {
     return html`
       <div>
-        <h2>About Page</h2>
+        <h2>Generate PDF</h2>
+        <button>Generate PDF</button>
       </div>
     `;
+    super.render();
   }
 }

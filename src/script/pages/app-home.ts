@@ -60,16 +60,6 @@ export class AppHome extends LitElement {
     console.log('This is your home page');
   }
 
-  share() {
-    if ((navigator as any).share) {
-      (navigator as any).share({
-        title: 'PWABuilder pwa-starter',
-        text: 'Check out the PWABuilder pwa-starter!',
-        url: 'https://github.com/pwa-builder/pwa-starter',
-      })
-    }
-  }
-
   render() {
     return html`
       <div>
@@ -79,13 +69,6 @@ export class AppHome extends LitElement {
           <img src="assets/icons/icon_512.png" alt="app icon">
           <h2>${this.message}</h2>
 
-          <p>
-            Welcome to the <a href="https://pwabuilder.com">PWABuilder</a> pwa-starter!
-
-            Be sure to head back to <a href="https://pwabuilder.com">PWABuilder</a> when you are ready to ship this PWA to the Microsoft, Google Play and Samsung Galaxy stores!
-          </p>
-
-          ${'share' in navigator ? html`<button @click="${this.share}">Share this Starter!</button>` : null}
         </div>
 
         <pwa-install>Install PWA Starter</pwa-install>

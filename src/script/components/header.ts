@@ -4,7 +4,7 @@ import { LitElement, css, html, customElement, property } from 'lit-element';
 @customElement('app-header')
 export class AppHeader extends LitElement {
 
-  @property({ type: String }) title: string = 'PWA Starter';
+  @property({ type: String }) title: string = 'PWA Experimental';
 
   static get styles() {
     return css`
@@ -27,7 +27,7 @@ export class AppHeader extends LitElement {
       }
 
       nav {
-        width: 7em;
+        width: 22em;
         display: flex;
         justify-content: space-between;
       }
@@ -51,7 +51,8 @@ export class AppHeader extends LitElement {
 
         <nav>
           <a href="./">Home</a>
-          <a href="./about">About</a>
+          <a href="./generate-pdf">Generate PDF</a>
+          <a href="./generate-xlsx">Generate XLSX</a>
         </nav>
       </header>
     `;
