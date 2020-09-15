@@ -4,6 +4,7 @@ import { generateSW } from 'rollup-plugin-workbox';
 import html from '@open-wc/rollup-plugin-html';
 import strip from '@rollup/plugin-strip';
 import copy from 'rollup-plugin-copy';
+import commonjs from '@rollup/plugin-commonjs';
 
 export default {
   input: 'index.html',
@@ -37,5 +38,8 @@ export default {
         '*.json'
       ]
     }),
+    commonjs({
+      include: 'node_modules/**'
+    })
   ]
 };
