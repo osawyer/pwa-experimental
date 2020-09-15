@@ -20,6 +20,5 @@ export class AppGeneratePdf extends LitElement {
         <button>Generate PDF</button>
       </div>
     `;
-    super.render();
   }
 }

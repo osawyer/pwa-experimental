@@ -20,6 +20,5 @@ export class AppGenerateXlsx extends LitElement {
         <button>Generate XLSX</button>
       </div>
     `;
-    super.render();
   }
 }
