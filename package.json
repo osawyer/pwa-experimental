@@ -16,6 +16,7 @@
   "dependencies": {
     "@pwabuilder/pwainstall": "^1.6.2",
     "@vaadin/router": "^1.7.1",
+    "jspdf": "^2.1.1",
     "lit-element": "^2.3.1"
   },
   "devDependencies": {
