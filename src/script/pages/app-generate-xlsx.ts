@@ -16,7 +16,7 @@ export class AppGenerateXlsx extends LitElement {
   render() {
     return html`
       <div>
-        <h2>Generate XLSX</h2>
+        <h2>Generate XLSX - under construction</h2>
         <button>Generate XLSX</button>
       </div>
     `;
