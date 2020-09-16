@@ -21,10 +21,14 @@ export default {
     }),
     copy({
       targets: [
-        { src: 'assets/**/*', dest: 'dist/assets/' },
+        { src: 'assets/docs/*', dest: 'dist/assets/docs/' },
+        { src: 'assets/icons/*', dest: 'dist/assets/icons/' },
+        { src: 'assets/img/*', dest: 'dist/assets/img/' },
+        { src: 'assets/screenshots/*', dest: 'dist/assets/screenshots/' },
         { src: 'styles/global.css', dest: 'dist/styles/'},
         { src: 'manifest.json', dest: 'dist/'}
-      ]
+      ],
+      verbose: true
     }),
     generateSW({
       swDest: 'dist/pwabuilder-sw.js',
