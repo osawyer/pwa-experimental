@@ -38,8 +38,10 @@ export default {
         '**/*/*.svg',
         '*.js',
         '*.html',
-        'assets/**',
-        '*.json'
+        'assets/**/*',
+        '*.json',
+        'assets/docs/costings-template.xlsx',
+        '*.xlsx'
       ]
     }),
     commonjs({
