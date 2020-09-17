@@ -2,7 +2,7 @@
   "name": "PWA Experimental",
   "display": "standalone",
   "start_url": "/",
-  "short_name": "experimental",
+  "short_name": "PWA Experimental",
   "theme_color": "#189eac",
   "description": "This is an experimental PWA",
   "orientation": "any",
@@ -40,7 +40,7 @@
   ],
   "features": [
     "Cross Platform",
-    "fast",
-    "simple"
+    "Fast",
+    "Simple"
   ]
 }

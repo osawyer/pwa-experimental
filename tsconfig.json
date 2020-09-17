@@ -7,7 +7,8 @@
       "esnext.array",
       "esnext",
       "es2017",
-      "dom"
+      "dom",
+      "webworker"
     ],
     "strict": true,
     "noUnusedLocals": true,
