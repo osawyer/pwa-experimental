@@ -27,7 +27,7 @@ export class AppHeader extends LitElement {
       }
 
       nav {
-        width: 22em;
+        width: 13em;
         display: flex;
         justify-content: space-between;
       }
@@ -52,7 +52,7 @@ export class AppHeader extends LitElement {
         <nav>
           <a href="./">Home</a>
           <a href="./generate-pdf">Generate PDF</a>
-          <a href="./generate-xlsx">Generate XLSX</a>
+          <!-- <a href="./generate-xlsx">Generate XLSX</a> -->
         </nav>
       </header>
     `;

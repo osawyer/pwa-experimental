@@ -31,7 +31,7 @@ export class AppGeneratePdf extends LitElement {
     doc.text("This isn't just any PDF mate. This is a JavaScript generated PDF.", 10, 10);
     doc.setFontSize(32);
     doc.text("BRUH", 10, 30);
-    doc.setFontSize(12);
+    doc.setFontSize(14);
     doc.text("ok", 10, 40);
     doc.setFontSize(10);
     doc.text("we'll make the font a lil bit smol", 40, 40);
@@ -55,13 +55,26 @@ export class AppGeneratePdf extends LitElement {
   }
 
   generatePdfFromHtml() {
-    const doc = new jsPDF();
-    doc.html(document.body, {
-      callback: function (doc) {
-        doc.save("html-generated.pdf");
-      },
-      x: 10,
-      y: 10
-    });
+    // const doc = new jsPDF();
+    // doc.html(document.body, {
+    //   callback: function (doc) {
+    //     doc.save("html-generated.pdf");
+    //   },
+    //   x: 10,
+    //   y: 10
+    // });
+
+    fetch(`${window.location.origin}/assets/templates/test.html`)
+      .then(async (response) => {
+        const doc = new jsPDF();
+        doc.html(await response.text(), {
+          callback: function (doc) {
+            doc.save("html-generated.pdf");
+          }
+        });
+      })
+      .catch((reason) => {
+        console.log("Error: ", reason);
+      });
   }
 }

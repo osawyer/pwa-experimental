@@ -74,16 +74,18 @@ export class AppIndex extends LitElement {
               await import('./app-generate-pdf.js');
             }
           },
-          {
-            path: "/generate-xlsx",
-            component: "app-generate-xlsx",
-            action: async () => {
-              await import('./app-generate-xlsx.js');
-            }
-          },
+          // {
+          //   path: "/generate-xlsx",
+          //   component: "app-generate-xlsx",
+          //   action: async () => {
+          //     await import('./app-generate-xlsx.js');
+          //   }
+          // },
         ]
       } as any)
     ]);
+    fetch(`${window.location.origin}/assets/templates/costings.xlsx`);
+    fetch(`${window.location.origin}/assets/templates/test.html`);
   }
 
   render() {
