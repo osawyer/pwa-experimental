@@ -13,7 +13,13 @@ export default {
     format: 'es',
   },
   plugins: [
-    resolve(),
+    resolve({
+			module: false, // <-- this library is not an ES6 module
+			browser: true, // <-- suppress node-specific features
+		}),
+    commonjs({
+      include: 'node_modules/**'
+    }),
     html(),
     terser(),
     strip({
@@ -21,7 +27,7 @@ export default {
     }),
     copy({
       targets: [
-        { src: 'assets/docs/*', dest: 'dist/assets/docs/' },
+        { src: 'assets/templates/*', dest: 'dist/assets/templates/' },
         { src: 'assets/icons/*', dest: 'dist/assets/icons/' },
         { src: 'assets/img/*', dest: 'dist/assets/img/' },
         { src: 'assets/screenshots/*', dest: 'dist/assets/screenshots/' },
@@ -34,18 +40,15 @@ export default {
       swDest: 'dist/pwabuilder-sw.js',
       globDirectory: 'dist/',
       globPatterns: [
-        'styles/*.css',
-        '**/*/*.svg',
-        '*.js',
-        '*.html',
-        'assets/**/*',
-        '*.json',
-        'assets/docs/costings-template.xlsx',
-        '*.xlsx'
-      ]
-    }),
-    commonjs({
-      include: 'node_modules/**'
+        '**/*.{html,json,js,css,png,jpg,jpeg,svg}',
+      ],
+      runtimeCaching: [{
+        urlPattern: /\.(?:xlsx|pdf|html)$/,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'templates'
+        }
+      }]
     })
   ]
 };
