@@ -19,7 +19,7 @@ export class AppGeneratePdf extends LitElement {
       <div>
         <h2>Generate PDF</h2>
         <button @click=${this.generatePdf}>Generate PDF</button>
-        <h2>Generate PDF From HTML - under construction</h2>
+        <h2>Generate PDF From HTML</h2>
         <button @click=${this.generatePdfFromHtml}>Generate PDF From HTML</button>
       </div>
     `;
